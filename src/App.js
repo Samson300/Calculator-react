@@ -20,10 +20,15 @@ class App extends Component {
     }
 
     calculate = () => {
-        this.setState({
+        try {this.setState({
             result: eval(this.state.result)
-        });
+        });} catch(e){
+            this.setState({
+                result: "error"
+            })
+        }
     }
+
 
     render() {
         return (
