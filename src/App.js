@@ -10,8 +10,18 @@ class App extends Component {
     }
 
     buttonPressed = (buttonName) => {
+        if (buttonName === "=") {
+            this.calculate();
+        } else {
         this.setState({
-            result: buttonName
+            result: this.state.result + buttonName
+        });
+        }
+    }
+
+    calculate = () => {
+        this.setState({
+            result: eval(this.state.result)
         });
     }
 
