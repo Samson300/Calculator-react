@@ -27,7 +27,7 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div className="App">
                 <Output result={this.state.result}/>
                 <KeyPad buttonPressed={this.buttonPressed} />
             </div>
